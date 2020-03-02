@@ -6,10 +6,10 @@ class TabSelector extends Component {
     this.state = {
       activeId: 'home'
     };
-    this.handleChangeTab = this.handleChangeTab.bind(this);
+    this.handleChanges = this.handleChanges.bind(this);
   }
 
-  handleChangeTab(event) {
+  handleChanges(event) {
     const buttonId = event.target.id;
     this.setState({ activeId: buttonId });
   }
@@ -20,21 +20,21 @@ class TabSelector extends Component {
       <div className="TabSelector">
         <button
           id="home"
-          onClick={this.props.handleChangeTab}
+          onClick={this.props.handleChanges}
           className={activeId === 'home' ? 'active' : ''}
         >
           Home
         </button>
         <button
           id="about"
-          onClick={this.props.handleChangeTab}
+          onClick={this.props.handleChanges}
           className={activeId === 'about' ? 'active' : ''}
         >
           About
         </button>
         <button
           id="contact"
-          onClick={this.props.handleChangeTab}
+          onClick={this.props.handleChanges}
           className={activeId === 'contact' ? 'active' : ''}
         >
           Contact

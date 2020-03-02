@@ -14,7 +14,7 @@ class App extends Component {
       activeId: 'home'
     };
   }
-  handleChangeTab = e => {
+  handleChanges = e => {
     const ButtonOnClick = e.target.id;
     this.setState({ activeId: ButtonOnClick });
   }
@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <TabSelector activeId={this.state.activeId} handleChangeTab={this.handleChangeTab}/>
+      <TabSelector activeId={this.state.activeId} handleChanges={this.handleChanges}/>
         <div className="App-content">
           {
             this.getTabContent()
